@@ -5,7 +5,7 @@ pub struct About {}
 
 impl crate::Demo for About {
     fn name(&self) -> &'static str {
-        "About egui"
+        "About Web3OS"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -101,11 +101,11 @@ fn links(ui: &mut egui::Ui) {
     use egui::special_emojis::{GITHUB, TWITTER};
     ui.hyperlink_to(
         format!("{GITHUB} github.com/emilk/egui"),
-        "https://github.com/emilk/egui",
+        "https://example.com",
     );
     ui.hyperlink_to(
         format!("{TWITTER} @ernerfeldt"),
-        "https://twitter.com/ernerfeldt",
+        "https://example.com/",
     );
     ui.hyperlink_to("📓 egui documentation", "https://docs.rs/egui/");
 }

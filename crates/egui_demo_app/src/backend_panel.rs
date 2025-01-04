@@ -90,7 +90,7 @@ impl BackendPanel {
 
         ui.separator();
 
-        ui.label("egui windows:");
+        ui.label("Web3OS windows:");
         self.egui_windows.checkboxes(ui);
 
         #[cfg(debug_assertions)]
@@ -180,10 +180,10 @@ impl BackendPanel {
 fn integration_ui(ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
     ui.horizontal(|ui| {
         ui.spacing_mut().item_spacing.x = 0.0;
-        ui.label("egui running inside ");
+        ui.label("Web3 OS is running ");
         ui.hyperlink_to(
-            "eframe",
-            "https://github.com/emilk/egui/tree/master/crates/eframe",
+            "Link",
+            "https://example.com",
         );
         ui.label(".");
     });

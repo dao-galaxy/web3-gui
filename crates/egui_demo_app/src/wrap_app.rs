@@ -375,7 +375,7 @@ impl WrapApp {
 
         ui.horizontal(|ui| {
             if ui
-                .button("Reset egui")
+                .button("Reset ui")
                 .on_hover_text("Forget scroll, positions, sizes etc")
                 .clicked()
             {

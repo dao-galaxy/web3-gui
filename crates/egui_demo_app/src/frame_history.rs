@@ -55,7 +55,7 @@ impl FrameHistory {
     fn graph(&self, ui: &mut egui::Ui) -> egui::Response {
         use egui::{emath, epaint, pos2, vec2, Pos2, Rect, Sense, Shape, Stroke, TextStyle};
 
-        ui.label("egui CPU usage history");
+        ui.label("Web3OS CPU usage history");
 
         let history = &self.frame_times;
 

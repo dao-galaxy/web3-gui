@@ -240,11 +240,11 @@ impl DemoWindows {
                     use egui::special_emojis::{GITHUB, TWITTER};
                     ui.hyperlink_to(
                         egui::RichText::new(TWITTER).size(font_size),
-                        "https://twitter.com/ernerfeldt",
+                        "https://example.com",
                     );
                     ui.hyperlink_to(
                         egui::RichText::new(GITHUB).size(font_size),
-                        "https://github.com/emilk/egui",
+                        "https://example.com",
                     );
                 });
             });
@@ -259,20 +259,20 @@ impl DemoWindows {
             .show(ctx, |ui| {
                 ui.add_space(4.0);
                 ui.vertical_centered(|ui| {
-                    ui.heading("✒ egui demos");
+                    ui.heading("✒ DAPP List");
                 });
 
                 ui.separator();
 
                 use egui::special_emojis::{GITHUB, TWITTER};
                 ui.hyperlink_to(
-                    format!("{GITHUB} egui on GitHub"),
-                    "https://github.com/emilk/egui",
+                    format!("{GITHUB} Web3OS Ecosystem"),
+                    "https://example.com",
                 );
-                ui.hyperlink_to(
-                    format!("{TWITTER} @ernerfeldt"),
-                    "https://twitter.com/ernerfeldt",
-                );
+                // ui.hyperlink_to(
+                //     format!("{TWITTER} @ernerfeldt"),
+                //     "https://twitter.com/ernerfeldt",
+                // );
 
                 ui.separator();
 
@@ -280,9 +280,11 @@ impl DemoWindows {
             });
 
         egui::TopBottomPanel::top("menu_bar").show(ctx, |ui| {
+            ui.add_space(5.0);
             egui::menu::bar(ui, |ui| {
                 file_menu_button(ui);
             });
+            ui.add_space(4.0);
         });
 
         self.groups.windows(ctx, &mut self.open);
@@ -348,7 +350,7 @@ fn file_menu_button(ui: &mut Ui) {
 
         if ui
             .add(
-                egui::Button::new("Reset egui memory")
+                egui::Button::new("Reset web3OS memory")
                     .shortcut_text(ui.ctx().format_shortcut(&reset_shortcut)),
             )
             .on_hover_text("Forget scroll, positions, sizes etc")

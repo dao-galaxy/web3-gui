@@ -53,7 +53,7 @@ fn main() -> eframe::Result {
     };
 
     eframe::run_native(
-        "egui demo app",
+        "Web3OS",
         options,
         Box::new(|cc| Ok(Box::new(egui_demo_app::WrapApp::new(cc)))),
     )
