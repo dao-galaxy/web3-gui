@@ -520,7 +520,7 @@ pub fn warn_if_debug_build(ui: &mut crate::Ui) {
                 .small()
                 .color(ui.visuals().warn_fg_color),
         )
-        .on_hover_text("egui was compiled with debug assertions enabled.");
+        .on_hover_text("Web3OS was compiled with debug assertions enabled.");
     }
 }
 
