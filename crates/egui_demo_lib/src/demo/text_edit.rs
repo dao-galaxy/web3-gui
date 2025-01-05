@@ -32,9 +32,9 @@ impl crate::Demo for TextEditDemo {
 
 impl crate::View for TextEditDemo {
     fn ui(&mut self, ui: &mut egui::Ui) {
-        ui.vertical_centered(|ui| {
-            ui.add(crate::egui_github_link_file!());
-        });
+        // ui.vertical_centered(|ui| {
+        //     ui.add(crate::egui_github_link_file!());
+        // });
 
         let Self { text } = self;
 

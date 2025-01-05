@@ -11,8 +11,11 @@ impl Default for ClipboardTest {
 }
 
 impl crate::Demo for ClipboardTest {
+    // fn name(&self) -> &'static str {
+    //     "Clipboard Test"
+    // }
     fn name(&self) -> &'static str {
-        "Clipboard Test"
+        "DID DEX"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -25,7 +28,7 @@ impl crate::Demo for ClipboardTest {
 
 impl crate::View for ClipboardTest {
     fn ui(&mut self, ui: &mut egui::Ui) {
-        ui.label("egui integrates with the system clipboard.");
+        ui.label("Web3OS integrates with the system clipboard.");
         ui.label("Try copy-cut-pasting text in the text edit below.");
 
         let text_edit_response = ui

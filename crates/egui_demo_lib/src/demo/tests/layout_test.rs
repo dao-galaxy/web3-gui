@@ -74,8 +74,11 @@ impl LayoutSettings {
 }
 
 impl crate::Demo for LayoutTest {
+    // fn name(&self) -> &'static str {
+    //     "Layout Test"
+    // }
     fn name(&self) -> &'static str {
-        "Layout Test"
+        "Chains"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

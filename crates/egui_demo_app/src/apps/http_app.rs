@@ -133,7 +133,7 @@ fn ui_url(ui: &mut egui::Ui, frame: &eframe::Frame, url: &mut String) -> bool {
     ui.horizontal(|ui| {
         if ui.button("Source code for this example").clicked() {
             *url = format!(
-                "https://raw.githubusercontent.com/emilk/egui/master/{}",
+                "https://example.com/{}",
                 file!()
             );
             trigger_fetch = true;

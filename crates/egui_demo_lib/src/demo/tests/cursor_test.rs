@@ -2,10 +2,12 @@
 pub struct CursorTest {}
 
 impl crate::Demo for CursorTest {
+    // fn name(&self) -> &'static str {
+    //     "Cursor Test"
+    // }
     fn name(&self) -> &'static str {
-        "Cursor Test"
+        "DID Market"
     }
-
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
         egui::Window::new(self.name()).open(open).show(ctx, |ui| {
             use crate::View as _;

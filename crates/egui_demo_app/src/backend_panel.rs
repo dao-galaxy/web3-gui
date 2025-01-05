@@ -183,7 +183,7 @@ fn integration_ui(ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         ui.label("Web3 OS is running ");
         ui.hyperlink_to(
             "Link",
-            "https://example.com",
+            "https://example.com/",
         );
         ui.label(".");
     });

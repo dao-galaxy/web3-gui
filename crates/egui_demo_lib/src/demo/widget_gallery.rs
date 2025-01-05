@@ -43,8 +43,11 @@ impl Default for WidgetGallery {
 }
 
 impl crate::Demo for WidgetGallery {
+    // fn name(&self) -> &'static str {
+    //     "🗄 Widget Gallery"
+    // }
     fn name(&self) -> &'static str {
-        "🗄 Widget Gallery"
+        "RPC"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -101,11 +104,11 @@ impl crate::View for WidgetGallery {
         ui.separator();
 
         ui.vertical_centered(|ui| {
-            let tooltip_text = "The full egui documentation.\nYou can also click the different widgets names in the left column.";
-            ui.hyperlink("https://docs.rs/egui/").on_hover_text(tooltip_text);
-            ui.add(crate::egui_github_link_file!(
-                "Source code of the widget gallery"
-            ));
+            let tooltip_text = "The full webOS documentation.\nYou can also click the different widgets names in the left column.";
+            // ui.hyperlink("https://docs.rs/egui/").on_hover_text(tooltip_text);
+            // ui.add(crate::egui_github_link_file!(
+            //     "Source code of the widget gallery"
+            // ));
         });
     }
 }
@@ -132,10 +135,10 @@ impl WidgetGallery {
 
         ui.add(doc_link_label("Hyperlink", "Hyperlink"));
         use egui::special_emojis::GITHUB;
-        ui.hyperlink_to(
-            format!("{GITHUB} egui on GitHub"),
-            "https://github.com/emilk/egui",
-        );
+        // ui.hyperlink_to(
+        //     format!("{GITHUB} egui on GitHub"),
+        //     "https://github.com/emilk/egui",
+        // );
         ui.end_row();
 
         ui.add(doc_link_label("TextEdit", "TextEdit"));
@@ -228,11 +231,11 @@ impl WidgetGallery {
         #[cfg(feature = "chrono")]
         {
             let date = date.get_or_insert_with(|| chrono::offset::Utc::now().date_naive());
-            ui.add(doc_link_label_with_crate(
-                "egui_extras",
-                "DatePickerButton",
-                "DatePickerButton",
-            ));
+            // ui.add(doc_link_label_with_crate(
+            //     "egui_extras",
+            //     "DatePickerButton",
+            //     "DatePickerButton",
+            // ));
             ui.add(egui_extras::DatePickerButton::new(date));
             ui.end_row();
         }

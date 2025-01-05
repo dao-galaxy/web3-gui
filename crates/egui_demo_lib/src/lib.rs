@@ -31,11 +31,11 @@ pub(crate) fn rust_view_ui(ui: &mut egui::Ui, code: &str) {
 #[macro_export]
 macro_rules! egui_github_link_file {
     () => {
-        $crate::egui_github_link_file!("(source code)")
+        $crate::egui_github_link_file!("(Link)")
     };
     ($label: expr) => {
         egui::github_link_file!(
-            "https://example.com",
+            "https://example.com/",
             egui::RichText::new($label).small()
         )
     };
@@ -45,11 +45,11 @@ macro_rules! egui_github_link_file {
 #[macro_export]
 macro_rules! egui_github_link_file_line {
     () => {
-        $crate::egui_github_link_file_line!("(source code)")
+        $crate::egui_github_link_file_line!("(Link)")
     };
     ($label: expr) => {
         egui::github_link_file_line!(
-            "https://example.com",
+            "https://example.com/",
             egui::RichText::new($label).small()
         )
     };

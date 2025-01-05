@@ -62,45 +62,52 @@ impl Default for DemoGroups {
         Self {
             about: About::default(),
             demos: DemoGroup::new(vec![
-                Box::<super::paint_bezier::PaintBezier>::default(),
-                Box::<super::code_editor::CodeEditor>::default(),
-                Box::<super::code_example::CodeExample>::default(),
-                Box::<super::context_menu::ContextMenus>::default(),
-                Box::<super::dancing_strings::DancingStrings>::default(),
-                Box::<super::drag_and_drop::DragAndDropDemo>::default(),
-                Box::<super::extra_viewport::ExtraViewport>::default(),
-                Box::<super::font_book::FontBook>::default(),
-                Box::<super::frame_demo::FrameDemo>::default(),
-                Box::<super::highlighting::Highlighting>::default(),
-                Box::<super::interactive_container::InteractiveContainerDemo>::default(),
-                Box::<super::MiscDemoWindow>::default(),
-                Box::<super::modals::Modals>::default(),
-                Box::<super::multi_touch::MultiTouch>::default(),
-                Box::<super::painting::Painting>::default(),
-                Box::<super::pan_zoom::PanZoom>::default(),
-                Box::<super::panels::Panels>::default(),
-                Box::<super::screenshot::Screenshot>::default(),
-                Box::<super::scrolling::Scrolling>::default(),
-                Box::<super::sliders::Sliders>::default(),
-                Box::<super::strip_demo::StripDemo>::default(),
-                Box::<super::table_demo::TableDemo>::default(),
-                Box::<super::text_edit::TextEditDemo>::default(),
-                Box::<super::text_layout::TextLayoutDemo>::default(),
-                Box::<super::tooltips::Tooltips>::default(),
-                Box::<super::undo_redo::UndoRedoDemo>::default(),
-                Box::<super::widget_gallery::WidgetGallery>::default(),
-                Box::<super::window_options::WindowOptions>::default(),
-            ]),
-            tests: DemoGroup::new(vec![
                 Box::<super::tests::ClipboardTest>::default(),
                 Box::<super::tests::CursorTest>::default(),
                 Box::<super::tests::GridTest>::default(),
                 Box::<super::tests::IdTest>::default(),
                 Box::<super::tests::InputEventHistory>::default(),
+                // Box::<super::paint_bezier::PaintBezier>::default(),
+                // Box::<super::code_editor::CodeEditor>::default(),
+                // Box::<super::code_example::CodeExample>::default(),
+                // Box::<super::context_menu::ContextMenus>::default(),
+                // Box::<super::dancing_strings::DancingStrings>::default(),
+                // Box::<super::drag_and_drop::DragAndDropDemo>::default(),
+                // Box::<super::extra_viewport::ExtraViewport>::default(),
+                // Box::<super::font_book::FontBook>::default(),
+                // Box::<super::frame_demo::FrameDemo>::default(),
+                // Box::<super::highlighting::Highlighting>::default(),
+                // Box::<super::interactive_container::InteractiveContainerDemo>::default(),
+                // Box::<super::MiscDemoWindow>::default(),
+                // Box::<super::modals::Modals>::default(),
+                // Box::<super::multi_touch::MultiTouch>::default(),
+                // Box::<super::painting::Painting>::default(),
+                // Box::<super::pan_zoom::PanZoom>::default(),
+                // Box::<super::panels::Panels>::default(),
+                // Box::<super::screenshot::Screenshot>::default(),
+                // Box::<super::scrolling::Scrolling>::default(),
+                // Box::<super::sliders::Sliders>::default(),
+                // Box::<super::strip_demo::StripDemo>::default(),
+                // Box::<super::table_demo::TableDemo>::default(),
+                // Box::<super::text_edit::TextEditDemo>::default(),
+                // Box::<super::text_layout::TextLayoutDemo>::default(),
+                // Box::<super::tooltips::Tooltips>::default(),
+                // Box::<super::undo_redo::UndoRedoDemo>::default(),
+                // Box::<super::widget_gallery::WidgetGallery>::default(),
+                // Box::<super::window_options::WindowOptions>::default(),
+            ]),
+            tests: DemoGroup::new(vec![
+                // Box::<super::tests::ClipboardTest>::default(),
+                // Box::<super::tests::CursorTest>::default(),
+                // Box::<super::tests::GridTest>::default(),
+                // Box::<super::tests::IdTest>::default(),
+                // Box::<super::tests::InputEventHistory>::default(),
+                Box::<super::widget_gallery::WidgetGallery>::default(),
                 Box::<super::tests::InputTest>::default(),
                 Box::<super::tests::LayoutTest>::default(),
                 Box::<super::tests::ManualLayoutTest>::default(),
                 Box::<super::tests::WindowResizeTest>::default(),
+                Box::<super::undo_redo::UndoRedoDemo>::default(),
             ]),
         }
     }
@@ -240,11 +247,11 @@ impl DemoWindows {
                     use egui::special_emojis::{GITHUB, TWITTER};
                     ui.hyperlink_to(
                         egui::RichText::new(TWITTER).size(font_size),
-                        "https://example.com",
+                        "https://example.com/",
                     );
                     ui.hyperlink_to(
                         egui::RichText::new(GITHUB).size(font_size),
-                        "https://example.com",
+                        "https://example.com/",
                     );
                 });
             });
@@ -259,7 +266,8 @@ impl DemoWindows {
             .show(ctx, |ui| {
                 ui.add_space(4.0);
                 ui.vertical_centered(|ui| {
-                    ui.heading("✒ DAPP List");
+                    ui.heading("DAPP Store");
+                    // ui.heading("✒ DAPP Store");
                 });
 
                 ui.separator();
@@ -267,7 +275,7 @@ impl DemoWindows {
                 use egui::special_emojis::{GITHUB, TWITTER};
                 ui.hyperlink_to(
                     format!("{GITHUB} Web3OS Ecosystem"),
-                    "https://example.com",
+                    "https://example.com/",
                 );
                 // ui.hyperlink_to(
                 //     format!("{TWITTER} @ernerfeldt"),
@@ -295,9 +303,9 @@ impl DemoWindows {
             ui.with_layout(egui::Layout::top_down_justified(egui::Align::LEFT), |ui| {
                 self.groups.checkboxes(ui, &mut self.open);
                 ui.separator();
-                if ui.button("Organize windows").clicked() {
-                    ui.ctx().memory_mut(|mem| mem.reset_areas());
-                }
+                // if ui.button("Organize windows").clicked() {
+                //     ui.ctx().memory_mut(|mem| mem.reset_areas());
+                // }
             });
         });
     }

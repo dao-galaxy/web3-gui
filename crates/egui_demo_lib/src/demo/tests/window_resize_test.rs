@@ -11,8 +11,11 @@ impl Default for WindowResizeTest {
 }
 
 impl crate::Demo for WindowResizeTest {
+    // fn name(&self) -> &'static str {
+    //     "Window Resize Test"
+    // }
     fn name(&self) -> &'static str {
-        "Window Resize Test"
+        "GameFi"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -66,7 +69,7 @@ impl crate::Demo for WindowResizeTest {
             .resizable(true)
             .show(ctx, |ui| {
                 ui.label("This window is resizable but has no scroll area. This means it can only be resized to a size where all the contents is visible.");
-                ui.label("egui will not clip the contents of a window, nor add whitespace to it.");
+                ui.label("Web3OS will not clip the contents of a window, nor add whitespace to it.");
                 ui.separator();
                 lorem_ipsum(ui, crate::LOREM_IPSUM);
             });

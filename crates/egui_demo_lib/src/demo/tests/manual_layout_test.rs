@@ -25,8 +25,11 @@ impl Default for ManualLayoutTest {
 }
 
 impl crate::Demo for ManualLayoutTest {
+    // fn name(&self) -> &'static str {
+    //     "Manual Layout Test"
+    // }
     fn name(&self) -> &'static str {
-        "Manual Layout Test"
+        "DeFi"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

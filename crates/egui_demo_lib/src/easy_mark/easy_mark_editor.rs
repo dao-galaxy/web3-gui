@@ -23,7 +23,8 @@ impl PartialEq for EasyMarkEditor {
 impl Default for EasyMarkEditor {
     fn default() -> Self {
         Self {
-            code: DEFAULT_CODE.trim().to_owned(),
+            // code: DEFAULT_CODE.trim().to_owned(),
+            code: "hello".to_owned(),
             highlight_editor: true,
             show_rendered: true,
             highlighter: Default::default(),

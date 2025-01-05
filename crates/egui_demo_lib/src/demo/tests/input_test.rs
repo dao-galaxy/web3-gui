@@ -55,8 +55,11 @@ pub struct InputTest {
 }
 
 impl crate::Demo for InputTest {
+    // fn name(&self) -> &'static str {
+    //     "Input Test"
+    // }
     fn name(&self) -> &'static str {
-        "Input Test"
+        "IPFS"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

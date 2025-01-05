@@ -66,8 +66,11 @@ pub struct InputEventHistory {
 }
 
 impl crate::Demo for InputEventHistory {
+    // fn name(&self) -> &'static str {
+    //     "Input Event History"
+    // }
     fn name(&self) -> &'static str {
-        "Input Event History"
+        "NFT Browser"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

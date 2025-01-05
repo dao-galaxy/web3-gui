@@ -2,8 +2,11 @@
 pub struct IdTest {}
 
 impl crate::Demo for IdTest {
+    // fn name(&self) -> &'static str {
+    //     "ID Test"
+    // }
     fn name(&self) -> &'static str {
-        "ID Test"
+        "Web3 Social"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

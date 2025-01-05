@@ -1357,8 +1357,8 @@ impl Visuals {
             window_fill: Color32::from_gray(248),
             window_stroke: Stroke::new(1.0, Color32::from_gray(190)),
 
-            panel_fill: Color32::from_gray(248),
-
+            // panel_fill: Color32::from_gray(248),
+            panel_fill: Color32::from_rgb(198, 195, 229),
             popup_shadow: Shadow {
                 offset: [6, 10],
                 blur: 8,
@@ -1392,7 +1392,8 @@ impl Selection {
 
     fn light() -> Self {
         Self {
-            bg_fill: Color32::from_rgb(144, 209, 255),
+            // bg_fill: Color32::from_rgb(144, 209, 255),
+            bg_fill: Color32::from_rgb(198, 195, 229),
             stroke: Stroke::new(1.0, Color32::from_rgb(0, 83, 125)),
         }
     }

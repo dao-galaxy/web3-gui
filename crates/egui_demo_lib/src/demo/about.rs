@@ -92,7 +92,7 @@ fn about_immediate_mode(ui: &mut egui::Ui) {
         ui.spacing_mut().item_spacing.x = 0.0;
         ui.label("There are no callbacks or messages, and no button state to store. ");
         ui.label("Read more about immediate mode ");
-        ui.hyperlink_to("here", "https://example.com");
+        ui.hyperlink_to("here", "https://example.com/");
         ui.label(".");
     });
 }
@@ -101,7 +101,7 @@ fn links(ui: &mut egui::Ui) {
     use egui::special_emojis::{GITHUB, TWITTER};
     ui.hyperlink_to(
         format!("{GITHUB} github.com/emilk/egui"),
-        "https://example.com",
+        "https://example.com/",
     );
     ui.hyperlink_to(
         format!("{TWITTER} @ernerfeldt"),

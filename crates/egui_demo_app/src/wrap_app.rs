@@ -209,12 +209,14 @@ impl WrapApp {
     ) -> impl Iterator<Item = (&'static str, Anchor, &mut dyn eframe::App)> {
         let mut vec = vec![
             (
-                "✨ Demos",
+                // "✨ Demos",
+                "🖹 Open file",
                 Anchor::Demo,
                 &mut self.state.demo as &mut dyn eframe::App,
             ),
             (
-                "🖹 EasyMark editor",
+                // "🖹 EasyMark editor",
+                "✨ Console" ,
                 Anchor::EasyMarkEditor,
                 &mut self.state.easy_mark_editor as &mut dyn eframe::App,
             ),
@@ -225,7 +227,8 @@ impl WrapApp {
                 &mut self.state.http as &mut dyn eframe::App,
             ),
             (
-                "🕑 Fractal Clock",
+                // "🕑 Fractal Clock",
+                "🕑 3D reader",
                 Anchor::Clock,
                 &mut self.state.clock as &mut dyn eframe::App,
             ),
@@ -247,7 +250,8 @@ impl WrapApp {
         }
 
         vec.push((
-            "🎨 Rendering test",
+            // "🎨 Rendering test",
+            "🎨 Developer",
             Anchor::Rendering,
             &mut self.state.rendering_test as &mut dyn eframe::App,
         ));
@@ -343,7 +347,7 @@ impl WrapApp {
             .show_animated(ctx, is_open, |ui| {
                 ui.add_space(4.0);
                 ui.vertical_centered(|ui| {
-                    ui.heading("💻 Backend");
+                    ui.heading("💻 System");
                 });
 
                 ui.separator();
@@ -405,12 +409,12 @@ impl WrapApp {
         ui.separator();
 
         if is_mobile(ui.ctx()) {
-            ui.menu_button("💻 Backend", |ui| {
+            ui.menu_button("💻 System", |ui| {
                 ui.set_style(ui.ctx().style()); // ignore the "menu" style set by `menu_button`.
                 self.backend_panel_contents(ui, frame, cmd);
             });
         } else {
-            ui.toggle_value(&mut self.state.backend_panel.open, "💻 Backend");
+            ui.toggle_value(&mut self.state.backend_panel.open, "💻 System");
         }
 
         ui.separator();

@@ -20,8 +20,11 @@ impl Default for GridTest {
 }
 
 impl crate::Demo for GridTest {
+    // fn name(&self) -> &'static str {
+    //     "Grid Test"
+    // }
     fn name(&self) -> &'static str {
-        "Grid Test"
+        "MPC Wallet"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

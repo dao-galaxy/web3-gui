@@ -27,8 +27,11 @@ pub struct UndoRedoDemo {
 }
 
 impl crate::Demo for UndoRedoDemo {
+    // fn name(&self) -> &'static str {
+    //     "⟲ Undo Redo"
+    // }
     fn name(&self) -> &'static str {
-        "⟲ Undo Redo"
+        "SocialFi"
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
