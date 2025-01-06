@@ -1392,8 +1392,7 @@ impl Selection {
 
     fn light() -> Self {
         Self {
-            // bg_fill: Color32::from_rgb(144, 209, 255),
-            bg_fill: Color32::from_rgb(244, 230, 230),
+            bg_fill: Color32::from_rgb(144, 209, 255),
             stroke: Stroke::new(1.0, Color32::from_rgb(0, 83, 125)),
         }
     }
